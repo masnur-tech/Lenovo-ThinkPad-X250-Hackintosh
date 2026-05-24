@@ -13,7 +13,7 @@ OpenCore configuration for Lenovo ThinkPad X250 running macOS Monterey 12.7.6.
 | **RAM** | 8 GB DDR3 | Working |
 | **Storage** | 128 GB SSD | Working |
 | **Graphics** | Intel HD Graphics 4400 | Working (with patch) |
-| **Audio** | Realtek ALC292 | Working (layout-id 28) |
+| **Audio** | Realtek ALC292 | Working (layout-id 59) |
 | **Wi-Fi/BT** | Supported Card | Working |
 | **SMBIOS** | MacBookPro11,4 | Configured |
 | **Bootloader**| OpenCore v1.0.4 | Active |
