@@ -63,9 +63,9 @@ Restart your laptop, press **F1** to enter BIOS, and set the following options:
 Follow these steps to deploy this EFI configuration:
 
 1. **Format USB Drive:** Format your 16GB+ USB flash drive as GUID Partition Table (GPT).
-2. **Create macOS Installer:** Download the macOS Monterey `.raw` from olarila.com, then flash it to your USB drive using one of these tools:
-   * **Method A (BalenaEtcher):** Open BalenaEtcher, click *Flash from file* to select your macOS image, click *Select target* to choose your USB drive, and then click *Flash!*.
-   * **Method B (Win32 Disk Imager):** Open Win32 Disk Imager, click the folder icon to select your macOS `.raw` file (make sure to change the file type filter to `*.*` to see it), select your USB drive letter under *Device*, and click *Write*.
+2. **Create macOS Installer:** Go to the official [Olarila Vanilla Images Archive](https://olarila.com/) to download the macOS Monterey `.raw` image. Once downloaded, flash it to your USB drive using one of these tools:
+   * **Method A (BalenaEtcher):** Open BalenaEtcher, click *Flash from file* to select your Olarila macOS image, click *Select target* to choose your USB drive, and then click *Flash!*.
+   * **Method B (Win32 Disk Imager):** Open Win32 Disk Imager, click the folder icon to select your Olarila `.raw` file (make sure to change the file type filter to `*.*` to see it), select your USB drive letter under *Device*, and click *Write*.
 3. **Mount EFI Partition:** Use a tool like MiniTool Partition Wizard (on Windows) or MountEFI (on macOS) to mount the hidden EFI partition of your flashed USB drive.
 4. **Copy EFI Folder:** Extract and copy the **EFI** folder (containing `BOOT` and `OC`) from this repository into the root directory of your USB's EFI partition.
 5. **Boot Installer:** Insert the USB into your ThinkPad X250, press **F12** during boot, select your USB drive, and choose *Install macOS Monterey*.
