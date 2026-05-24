@@ -36,6 +36,41 @@ OpenCore configuration for Lenovo ThinkPad X250 running macOS Monterey 12.7.6.
 - **Target OS:** macOS Monterey 12.7.6
 - **SMBIOS Target:** MacBookPro11,4
 
+## Pre-Installation (BIOS Settings)
+
+Before booting the macOS installer, you must configure your ThinkPad X250 BIOS settings properly. 
+
+Restart your laptop, press **F1** to enter BIOS, and set the following options:
+
+### Security
+- **Security Chip:** Disabled
+- **Memory Protection -> Execution Prevention:** Enabled
+- **Secure Boot:** Disabled
+
+### Startup
+- **UEFI/Legacy Boot:** UEFI Only
+- **CSM Support:** Enabled
+
+### Config
+- **Serial ATA (SATA) -> Controller Mode:** AHCI
+- **CPU -> Intel Virtualization Technology:** Enabled
+- **CPU -> Intel VT-d:** Disabled (or keep enabled if `DisableIoMapper` quirk is on)
+
+---
+
+## Installation Process
+
+Follow these steps to deploy this EFI configuration:
+
+1. **Format USB Drive:** Format your 16GB+ USB flash drive as GUID Partition Table (GPT).
+2. **Create macOS Installer:** Download the macOS Monterey `.raw` from olarila.com, then flash it to your USB drive using one of these tools:
+   * **Method A (BalenaEtcher):** Open BalenaEtcher, click *Flash from file* to select your macOS image, click *Select target* to choose your USB drive, and then click *Flash!*.
+   * **Method B (Win32 Disk Imager):** Open Win32 Disk Imager, click the folder icon to select your macOS `.raw` file (make sure to change the file type filter to `*.*` to see it), select your USB drive letter under *Device*, and click *Write*.
+3. **Mount EFI Partition:** Use a tool like MiniTool Partition Wizard (on Windows) or MountEFI (on macOS) to mount the hidden EFI partition of your flashed USB drive.
+4. **Copy EFI Folder:** Extract and copy the **EFI** folder (containing `BOOT` and `OC`) from this repository into the root directory of your USB's EFI partition.
+5. **Boot Installer:** Insert the USB into your ThinkPad X250, press **F12** during boot, select your USB drive, and choose *Install macOS Monterey*.
+6. **Post-Install:** Once macOS is installed on your SSD, mount your SSD's EFI partition and copy this EFI folder there so you can boot without the USB drive.
+
 ## Post-Installation Notes
 
 1. **SMBIOS Generation:** You **must** generate your own unique Serial Number, UUID, and MLB using GenSMBIOS before using this EFI.
