@@ -80,6 +80,6 @@ Follow these steps to deploy this EFI configuration:
 
 You can download the full, pre-configured EFI folder for Lenovo ThinkPad X250 from the link below:
 
-👉 **[Download EFI via Google Drive]([PASTE_LINK_GOOGLE_DRIVE_DISINI](https://drive.google.com/file/d/1008cHBuX7N5xM4R2Jk5PmqnkRa9n-kNJ/view?usp=drive_link))**
+👉 **[Download EFI via Google Drive](https://drive.google.com/file/d/1008cHBuX7N5xM4R2Jk5PmqnkRa9n-kNJ/view?usp=drive_link)**
 
 *Note: This EFI is updated to OpenCore v1.0.4 and optimized for macOS Monterey 12.7.6.*
