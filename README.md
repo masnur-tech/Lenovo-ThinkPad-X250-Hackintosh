@@ -83,3 +83,13 @@ You can download the full, pre-configured EFI folder for Lenovo ThinkPad X250 fr
 👉 **[Download EFI via Google Drive](https://drive.google.com/file/d/1008cHBuX7N5xM4R2Jk5PmqnkRa9n-kNJ/view?usp=drive_link)**
 
 *Note: This EFI is updated to OpenCore v1.0.4 and optimized for macOS Monterey 12.7.6.*
+
+## 🏅 Credits & Acknowledgments
+
+Special thanks to the amazing open-source community and developers:
+
+- **Apple** for macOS.
+- **Acidanthera** for OpenCore Bootloader and essential kexts (Lilu, WhateverGreen, AppleALC, VirtualSMC).
+- **Dortania** for the comprehensive OpenCore Install Guide.
+- **Sniki** for the inspirational ThinkPad Hackintosh repository layout.
+- **RehabMan** for legacy ACPI patches and contributions to the ThinkPad community.
